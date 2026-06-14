@@ -79,6 +79,14 @@ const changelogs: ChangeLogItem[] = [
       `Added Sandalphon's "entire kit" LMAOOOO (thx @Silver from GBFR discord for the numbers)`,
     ],
   },
+  {
+    version: "1.3.0",
+    changelogs: [
+      "Added Yodarha's Warpath",
+      "Fixed Yodarha's Warpath to not apply on SBA (should add the rest soon)",
+      "Fixed internal typo for Yodarha",
+    ],
+  },
 ];
 
 export const BannerNotif = () => {
@@ -246,7 +254,17 @@ export const BannerNotif = () => {
               className="flex gap-1"
               target="_blank"
             >
-              <p>Github Issues</p>
+              <p>Original - GH Issues</p>
+              <SquareArrowOutUpRight className="h-2 w-2" />
+            </a>
+          </Button>
+          <Button asChild variant="link" className="text-xs">
+            <a
+              href="https://github.com/hiroleweeb/relink-damage/issues"
+              className="flex gap-1"
+              target="_blank"
+            >
+              <p>Fork - GH Issues</p>
               <SquareArrowOutUpRight className="h-2 w-2" />
             </a>
           </Button>

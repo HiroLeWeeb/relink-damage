@@ -48,7 +48,7 @@ export const Navbar = () => {
               <NavigationMenuItem>
                 <Link href="/" passHref legacyBehavior>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Relink Damage Calculator {packageJson.version}
+                    Relink Damage Calculator {packageJson.version} - Forked
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -61,7 +61,7 @@ export const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   className={navigationMenuTriggerStyle()}
-                  href="https://github.com/arveoncode/relink-damage"
+                  href="https://github.com/hiroleweeb/relink-damage"
                   target="_blank"
                 >
                   <div className="flex gap-1">
