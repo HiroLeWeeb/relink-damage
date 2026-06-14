@@ -127,7 +127,7 @@ export const characterConstants = [
   {
     characterName: "Yodarha",
     imageLink: "https://i.imgur.com/Efr4Hhf.png",
-    warpathEnhancement: 0,
+    warpathEnhancement: 0.3,
   },
   {
     characterName: "Tweyen",
