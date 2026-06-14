@@ -19,7 +19,7 @@ import { ferrySkills } from "@/constants/character/skills/ferry";
 import { rosettaSkills } from "@/constants/character/skills/rosetta";
 import { katalinaSkills } from "@/constants/character/skills/katalina";
 import { eugenSkills } from "@/constants/character/skills/eugen";
-import { yordarhaSkills } from "@/constants/character/skills/yodarha";
+import { yodarhaSkills } from "@/constants/character/skills/yodarha";
 import { ghandagozaSkills } from "@/constants/character/skills/ghandagoza";
 import { vaneSkills } from "@/constants/character/skills/vane";
 import { percivalSkills } from "@/constants/character/skills/percival";
@@ -126,7 +126,9 @@ export const SkillsTable = () => {
 
         const enhancedDamageModifier = safeDecimalAdder([
           baseEnhancedDamageModifier,
-          charHasWarpathCondition
+           selectedCharacter === "Yodarha" && skill.classification.skyboundArt
+		? 0
+		: charHasWarpathCondition
             ? skill.skill === warpathCondition() ||
               (skill.classification[
                 warpathCondition() as keyof typeof skill.classification
@@ -431,7 +433,7 @@ export const SkillsTable = () => {
         setCharData(calculateSkills(eugenSkills));
         break;
       case "Yodarha":
-        setCharData(calculateSkills(yordarhaSkills));
+        setCharData(calculateSkills(yodarhaSkills));
         break;
       case "Tweyen":
         setCharData(calculateSkills(tweyenSkills));
