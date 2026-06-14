@@ -126,7 +126,9 @@ export const SkillsTable = () => {
 
         const enhancedDamageModifier = safeDecimalAdder([
           baseEnhancedDamageModifier,
-          charHasWarpathCondition
+           selectedCharacter === "Yodarha" && skill.classification.skyboundArt
+		? 0
+		: charHasWarpathCondition
             ? skill.skill === warpathCondition() ||
               (skill.classification[
                 warpathCondition() as keyof typeof skill.classification
